@@ -60,13 +60,13 @@ html, body{
 #nav{
     position: fixed;
     top: -100%;
-    height: 100%;
+    height: 100vh;
     width: 100%;
     font-family: Poppins;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center; 
-    background-color: #f7f6f6;
+    /* background-color: #f7f6f6; */
     z-index: 88;
     overflow: hidden;
 }
@@ -85,17 +85,20 @@ html, body{
 #right-nav{
     position: relative;
     height: 100%;
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
+    flex-direction: column;
+    background-color: #fff;
 }
 
 #CLOSE{
     position: absolute;
-    top: 20px;
-    right: 25px;
+    top: 30px;
+    right: 30px;
+    z-index: 40;
+    /* background-color: red; */
 }
 
 #CLOSE i{
@@ -106,21 +109,59 @@ html, body{
     opacity: 0;
 }
 
-#nlink{
+/* #link-container{
     position: relative;
+    width: 100%;
     padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     /* gap: 10px; */
-    flex-direction: column;
+    /* flex-direction: column; */
     /* background-color: #fff; */
-    color: black;
+    /* color: black; */
+ 
+
+.nlink{
+    /* position: relative; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.nlink img{
+    position: absolute;
+    padding: 12px;
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateY(10%) rotate(3deg);
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.nlink img:nth-child(1){
+    height: 300px;
+    width: 250px;
+    left: 18%;
+}
+
+.nlink img:nth-child(3){
+    height: 350px;
+    width: 220px;
+    right: 25%;
+}
+
+.nlink:hover img{
+   opacity: 1;
+   transform: translateY(0%) rotate(0deg);
 }
 
 .navlink{
     position: relative;
-    height: 65px;
+    height: 110px;
     margin-bottom: 10px;
     /* background-color: red; */
     overflow: hidden;
@@ -129,10 +170,12 @@ html, body{
 .navlink h1{
     cursor: pointer;
     padding: 0 2vw;
-    font-size: 3vw;
+    color: #000;
+    font-size: 4.8vw;
     font-weight: 460;
     line-height: -5vw;
     transition: all ease 0.5s;
+    /* background-color: red; */
 }
 
 .navlink:hover h1:nth-child(1){
@@ -142,7 +185,6 @@ html, body{
 .navlink:hover h1:nth-child(2){
     transform: translateY(-100%);
 }
-
 
 #landing-page > h1{
     font-size: 5vw;

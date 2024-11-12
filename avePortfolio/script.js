@@ -212,6 +212,11 @@ stringAnimation();
 function fullnav(){
     let menu = document.querySelector("#menu");
     let close = document.querySelector("#CLOSE i");
+
+    //for images
+    let imgArea = document.querySelector(".navlink");
+    let images = document.querySelector(".nlink img");
+
  
     let tl = gsap.timeline();
  
@@ -221,7 +226,7 @@ function fullnav(){
          ease: "power2"
     });
 
-    tl.from("#nlink .navlink",{
+    tl.from(".nlink .navlink",{
         y: 100,
         duration: 0.5,
         stagger: 0.1,
@@ -239,6 +244,7 @@ function fullnav(){
     });
 
     close.addEventListener("click",()=>{
+        console.log("clicked")
         tl.reverse();
     });
 
